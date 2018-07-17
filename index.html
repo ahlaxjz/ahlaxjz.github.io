@@ -18,6 +18,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -122,6 +129,22 @@
     }
   };
 </script>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
 
 
 
@@ -347,6 +370,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/17/The-First-Blog/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/17/The-First-Blog/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -354,6 +387,37 @@
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  269
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
           
 
           
@@ -373,7 +437,8 @@
       
         
           
-            <p>  这是我的第一篇博客，就先写一下我的感受和想法。</p>
+            <a id="more"></a>
+<p>  这是我的第一篇博客，就先写一下我的感受和想法。</p>
 <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>  制作个人博客的目的是为了激励自己能在写博客的道路上一发不可收拾，哈哈，当然了，作为了学了五年计算机的，竟然还没写过blog，真的算是很丢人的了。所以，为了提高改进勉励自己，就是干！！！其实，最主要目的还是为了记录下在计算机道路上捡到的小石子，毕竟以前捡到的最后还是丢了。</p>
 <h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>  开始爬山，好好努力，带上女朋友，一起加油！！！</p>
 <h2 id="Hexo搭建"><a href="#Hexo搭建" class="headerlink" title="Hexo搭建"></a>Hexo搭建</h2><p>  参考 <a href="http://www.cnblogs.com/fengxiongZz/p/7707568.html" target="_blank" rel="noopener">http://www.cnblogs.com/fengxiongZz/p/7707568.html</a></p>
@@ -389,6 +454,8 @@
     
     
 
+	
+	
     
 
     
@@ -486,10 +553,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -538,6 +605,15 @@
   </span>
   <span class="author" itemprop="copyrightHolder">夏家铸</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">269</span>
   
 </div>
 
@@ -712,6 +788,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'p8UtF9JmKBvWcjggv5jfGssR-gzGzoHsz',
+        appKey: 'a3AqhRCDsWQ0qY6pRVMUI1pH',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
