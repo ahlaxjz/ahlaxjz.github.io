@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="夏家铸的个人博客">
 <meta property="og:description" content="在做真值发现的研究中，获取了CRH的源码，不过是Matlab的，没接触过，只能从头学起。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-19T02:50:11.743Z">
+<meta property="og:updated_time" content="2018-07-19T03:15:17.294Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Matlab基本语法">
 <meta name="twitter:description" content="在做真值发现的研究中，获取了CRH的源码，不过是Matlab的，没接触过，只能从头学起。">
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  323
+                  994
                 </span>
               
 
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  4
                 </span>
               
             </div>
@@ -443,6 +443,65 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">c(1:2,1:2)</span><br><span class="line"></span><br><span class="line">ans = </span><br><span class="line"></span><br><span class="line">    &apos;Red&apos;    &apos;Blue&apos;</span><br><span class="line">    [  1]    [   2]</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; c = &#123; &apos;china&apos;, &apos;中国&apos;, [1 2 3 4]&#125;</span><br><span class="line"></span><br><span class="line">c = </span><br><span class="line"></span><br><span class="line">    &apos;china&apos;    &apos;中国&apos;    [1x4 double]</span><br></pre></td></tr></table></figure>
 <p>(): 用于引用数组的元素。a=[1 2 2],则a(1,2)就是访问的a数组的第一行第2列元素，为2。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; clear all</span><br><span class="line">&gt;&gt; a = cell(2, 3)</span><br><span class="line"></span><br><span class="line">a = </span><br><span class="line"></span><br><span class="line">    []    []    []</span><br><span class="line">    []    []    []</span><br><span class="line"></span><br><span class="line">&gt;&gt; a&#123;1, 2&#125; = &apos;china&apos;</span><br><span class="line"></span><br><span class="line">a = </span><br><span class="line"></span><br><span class="line">    []    &apos;china&apos;    []</span><br><span class="line">    []         []    []</span><br><span class="line"></span><br><span class="line">&gt;&gt; a&#123;1, 3&#125; = [1 2 3; 2 3 4]</span><br><span class="line"></span><br><span class="line">a = </span><br><span class="line"></span><br><span class="line">    []    &apos;china&apos;    [2x3 double]</span><br><span class="line">    []         []              []</span><br><span class="line"></span><br><span class="line">&gt;&gt; b = a&#123;1, 3&#125;(1, 3)</span><br><span class="line"></span><br><span class="line">b =</span><br><span class="line"></span><br><span class="line">     3</span><br></pre></td></tr></table></figure></p>
+<h2 id="MATLAB算术运算"><a href="#MATLAB算术运算" class="headerlink" title="MATLAB算术运算"></a>MATLAB算术运算</h2><p>MATLAB的算术运算有两种不同类型：1）矩阵算术运算；2）阵列算术运算。<br>MATLAB矩阵算术运算与线性代数中的定义相同：执行数组操作，无论是在一维和多维数组元素的元素。<br>矩阵运算符和数组运营商是有区别的句点（.）符号。然而，由于加法和减法运算矩阵和阵列是相同的，操作者这两种情况下是相同的。<br>下表给出了运算符的简要说明：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">操作符</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">加法或一元加号。A + B将A和B。 A和B必须具有相同的尺寸，除非一个人是一个标量。一个标量，可以被添加到任何大小的矩阵。</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">减法或一元减号。A - B，减去B从A和B必须具有相同的大小，除非是一个标量。可以从任意大小的矩阵中减去一个标量。</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">矩阵乘法；是一个更精确的矩阵A和B的线性代数积，矩阵乘法对于非纯量A和B，列一个数必须等于B.标量可以乘以一个任意大小的矩阵的行数。</td>
+</tr>
+<tr>
+<td style="text-align:center">.*</td>
+<td style="text-align:center">数组的乘法；A.*B是数组A和B的元素积，A和B必须具有相同的大小，除非A、B中有一个是标量。</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td style="text-align:center">斜线或矩阵右除法；B/A与B * inv（A）大致相同。更确切地说：B/A = (A’B’)’</td>
+</tr>
+<tr>
+<td style="text-align:center">./</td>
+<td style="text-align:center">矩阵右除法；矩阵A与矩阵B相应元素相除（A、B为同纬度的矩阵）</td>
+</tr>
+<tr>
+<td style="text-align:center">.\</td>
+<td style="text-align:center">反斜杠或矩阵左除；如果A是一个方阵，AB是大致相同的INV（A）<em> B，除非它是以不同的方式计算。如果A是一个n</em>n的矩阵，B是一个n组成的列向量，或是由若干这样的列的矩阵，则X = AB 是方程 AX = B ，如果A严重缩小或者几乎为单数，则显示警告消息。</td>
+</tr>
+<tr>
+<td style="text-align:center">.</td>
+<td style="text-align:center">数组左除法；A. B是元素B（i，j）/A（i，j）的矩阵。A和B必须具有相同的大小，除非其中一个是标量。</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">矩阵的幂。X^P是X到幂P，如果p是标量；如果p是一个整数，则通过重复平方计算功率。如果整数为负数，X首先反转。对P值的计算，涉及到特征值和特征向量，即如果[ D ] = V，EIG（x），那么X^P = V * D.^P / V。</td>
+</tr>
+<tr>
+<td style="text-align:center">.^</td>
+<td style="text-align:center">A.^B：A的每个元素的B次幂（A、B为同纬度的矩阵）</td>
+</tr>
+<tr>
+<td style="text-align:center">‘</td>
+<td style="text-align:center">矩阵的转置；A’是复数矩阵A的线性代数转置，这是复共轭转置。</td>
+</tr>
+<tr>
+<td style="text-align:center">.’</td>
+<td style="text-align:center">数组的转置；A’是数组A的转置，对于复数矩阵，这不涉及共轭。</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -629,7 +688,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#括号"><span class="nav-number">1.</span> <span class="nav-text">括号</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#括号"><span class="nav-number">1.</span> <span class="nav-text">括号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB算术运算"><span class="nav-number">2.</span> <span class="nav-text">MATLAB算术运算</span></a></li></ol></div>
             
 
           </div>
@@ -664,7 +723,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">592</span>
+    <span title="Site words total count">1.3k</span>
   
 </div>
 
