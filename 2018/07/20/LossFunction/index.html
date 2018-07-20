@@ -107,7 +107,7 @@
 <meta property="og:image" content="http://yoursite.com/images/eq5.gif">
 <meta property="og:image" content="http://yoursite.com/images/eq6.gif">
 <meta property="og:image" content="http://yoursite.com/images/eq7.gif">
-<meta property="og:updated_time" content="2018-07-20T13:05:40.921Z">
+<meta property="og:updated_time" content="2018-07-20T13:34:13.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="损失函数">
 <meta name="twitter:description" content="在统计学，统计决策理论和经济学中，损失函数是指一种将一个事件（在一个样本空间中的一个元素）映射到一个表达与其事件相关的经济成本或机会成本的实数上的一种函数。更通俗地说，在统计学中损失函数是一种衡量损失和错误（这种损失与“错误地”估计有关，如费用或者设备的损失）程度的函数。">
@@ -452,9 +452,11 @@
 <p>解释一下含义：</p>
 <ul>
 <li>当真实值y=1时，，当预测值越接近1，也越接近最大值1，加上负号后就代表误差值最小。而当预测值越接近0，越接近负无穷，加上负号后就代表误差值最大。</li>
-<li>当真实值y=0时，，当预测值越接近0，也越接近最大值1，加上负号后就代表误差值最小。而当预测值越接近1，越接近负无穷，加上负号后就代表误差值最大。<br>最后逻辑回归中对于所有样本的损失函数为：<br>$$ L(Y,P(Y|X))=−logP(Y|X) $$<h2 id="指数损失函数"><a href="#指数损失函数" class="headerlink" title="指数损失函数"></a>指数损失函数</h2></li>
+<li><p>当真实值y=0时，，当预测值越接近0，也越接近最大值1，加上负号后就代表误差值最小。而当预测值越接近1，越接近负无穷，加上负号后就代表误差值最大。<br>最后逻辑回归中对于所有样本的损失函数为： </p>
+<p>$$ L(Y,P(Y|X))=−logP(Y|X) $$</p>
+</li>
 </ul>
-<p>指数误差，在boosting算法中比较常见:<br>学过Adaboost算法的人都知道，它是前向分步加法算法的特例，是一个加和模型，损失函数就是指数函数。在Adaboost中，经过m此迭代之后，可以得到</p>
+<h2 id="指数损失函数"><a href="#指数损失函数" class="headerlink" title="指数损失函数"></a>指数损失函数</h2><p>指数误差，在boosting算法中比较常见:<br>学过Adaboost算法的人都知道，它是前向分步加法算法的特例，是一个加和模型，损失函数就是指数函数。在Adaboost中，经过m此迭代之后，可以得到</p>
 <p><img src="/images/eq1.gif" alt=""></p>
 <p>Adaboost每次迭代时的目的是为了找到最小化下列式子时的参数<br><img src="/images/eq2.gif" alt="">    </p>
 <p>而指数损失函数(exp-loss）的标准形式如下</p>
